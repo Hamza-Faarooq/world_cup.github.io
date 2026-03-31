@@ -72,11 +72,12 @@ nav{background:var(--nav-bg);display:flex;align-items:center;justify-content:spa
 .s-team{padding:2rem 2rem;display:flex;flex-direction:column;justify-content:center}
 .s-team.eng{align-items:flex-end;border-right:1px solid #1A1A1A}
 .s-team.nz{align-items:flex-start;border-left:1px solid #1A1A1A}
-.t-flag {
-  font-size: 3rem;
-  line-height: 1;
+
+ .t-flag {
+  width: 48px;
+  height: auto;
+  display: block;
   margin-bottom: .3rem;
-  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }.t-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.06em;line-height:1}
 .t-name.eng{color:#E06060}
 .t-name.nz{color:#909090}
@@ -282,8 +283,7 @@ footer p{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.1em;l
 <!-- SCOREBOARD -->
 <div class="score-banner">
   <div class="s-team eng">
-    <div class="t-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
-    <div class="t-name eng">England</div>
+<img src="./img1.png" class="t-flag" alt="England flag">    <div class="t-name eng">England</div>
     <div class="t-score">242 / 8</div>
     <div class="t-extras">
       Stokes 84* · Buttler 59<br/>
@@ -302,7 +302,7 @@ footer p{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.1em;l
     <div class="sc-venue">Lord's Cricket Ground, London · 14 July 2019</div>
   </div>
   <div class="s-team nz">
-    <div class="t-flag">🇳🇿</div>
+    <img src="./img2.png" class="t-flag">
     <div class="t-name nz">New Zealand</div>
     <div class="t-score">242 / 7</div>
     <div class="t-extras">
