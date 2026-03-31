@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Daily Prophet · England win ICC World Cup Final 2019 · Lord's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet"/>
+<style>
+/* ═══ THEME ═══ */
+:root {
+  --eng:#CC0000; --eng-light:#E83030; --eng-dim:#8B0000;
+  --nz:#111111; --nz-light:#3A3A3A;
+  --gold:#C9A84C; --gold-light:#E8C96B; --gold-dim:#7A6030;
+  --bg:#F4F0E6; --bg-alt:#EAE4D0; --bg-card:#FAF7EE; --bg-dark:#0A0800;
+  --ink:#0A0800; --text-body:#1A1408; --text-muted:#52472C;
+  --border:#C0B090; --nav-bg:#0A0800; --score-bg:#0A0800; --score-text:#fff;
+  --award-bg:#EAE4D0; --toc-bg:#FAF7EE; --spot-bg:#FAF7EE;
+  --pen-bg:#EAE4D0; --stat-bg:#FAF7EE; --tl-bg:#0A0800;
+  --col-rule:#C0B090; --close-bg:#0A0800;
+}
+[data-theme="dark"]{
+  --bg:#0E0C06; --bg-alt:#181410; --bg-card:#141208; --bg-dark:#060400;
+  --ink:#EEE8D0; --text-body:#D4C8A8; --text-muted:#807050;
+  --border:#2A2410; --nav-bg:#060400; --score-bg:#060400; --score-text:#EEE8D0;
+  --award-bg:#181410; --toc-bg:#141208; --spot-bg:#141208;
+  --pen-bg:#181410; --stat-bg:#141208; --tl-bg:#060400;
+  --col-rule:#2A2410; --close-bg:#060400;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text-body);font-family:'EB Garamond',Georgia,serif;overflow-x:hidden;transition:background .35s,color .35s}
+
+/* PROGRESS */
+#pb{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--eng),var(--eng-light));width:0%;z-index:9999}
+
+/* NAV */
+nav{background:var(--nav-bg);display:flex;align-items:center;justify-content:space-between;padding:0 1.8rem;height:46px;position:sticky;top:0;z-index:900;border-bottom:2px solid var(--eng-dim);transition:background .35s;gap:1rem}
+.nav-logo{font-family:'UnifrakturCook',cursive;font-weight:700;font-size:1.3rem;letter-spacing:.04em;color:var(--gold);text-decoration:none;white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;gap:1.6rem;list-style:none;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;flex:1}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:#8A7050;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:color .2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-right{display:flex;align-items:center;gap:.9rem;flex-shrink:0}
+.nav-date{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.08em;color:#4A3820;text-transform:uppercase;white-space:nowrap}
+.tbtn{background:none;border:1px solid var(--gold-dim);border-radius:20px;cursor:pointer;display:flex;align-items:center;gap:.35rem;padding:.28rem .7rem;font-family:'DM Sans',sans-serif;font-size:.64rem;letter-spacing:.08em;color:var(--gold);transition:all .25s;white-space:nowrap}
+.tbtn:hover{background:rgba(201,168,76,.1);border-color:var(--gold)}
+.tbtn .ti{font-size:.82rem;transition:transform .4s}
+.tbtn:hover .ti{transform:rotate(25deg)}
+
+/* MASTHEAD */
+.masthead{background:var(--bg-card);border-bottom:4px double var(--border);text-align:center;padding:2.8rem 1rem 1.8rem;position:relative;overflow:hidden;transition:background .35s}
+.masthead::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(160,130,80,.07) 28px,rgba(160,130,80,.07) 29px);pointer-events:none}
+.m-topbar{font-family:'DM Sans',sans-serif;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.32rem 0;display:inline-block;width:100%;margin-bottom:.6rem}
+.m-title{font-family:'UnifrakturCook',cursive;font-size:clamp(3rem,9vw,6rem);font-weight:700;line-height:.9;color:var(--ink);transition:color .35s}
+.m-title span{color:var(--gold)}
+.m-orn{color:var(--eng);font-size:1.2rem;margin:.7rem 0 .35rem;letter-spacing:.5rem;display:block}
+.m-sub{font-family:'EB Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--text-muted);margin:.2rem 0 .7rem;letter-spacing:.06em}
+.m-rule{display:flex;align-items:center;gap:.8rem;justify-content:center;margin:.6rem auto}
+.m-rule hr{flex:1;max-width:130px;border:none;border-top:1px solid var(--border)}
+.m-rule .dia{color:var(--eng);font-size:.5rem}
+.m-meta{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted)}
+.m-badge{display:inline-block;background:var(--bg-alt);border:1px solid var(--border);padding:.2rem .9rem;font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.6rem}
+
+/* SPEC BANNER */
+.spec-banner{background:var(--eng-dim);color:#FFE0E0;text-align:center;padding:.8rem 1rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(1rem,3vw,1.45rem);letter-spacing:.22em;border-bottom:1px solid var(--eng-dim);transition:background .35s}
+
+/* SCOREBOARD */
+.score-banner{background:var(--score-bg);color:var(--score-text);display:grid;grid-template-columns:1fr auto 1fr;position:relative;overflow:hidden;transition:background .35s}
+.score-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 120%,rgba(204,0,0,.12) 0%,transparent 65%);pointer-events:none}
+.s-team{padding:2rem 2rem;display:flex;flex-direction:column;justify-content:center}
+.s-team.eng{align-items:flex-end;border-right:1px solid #1A1A1A}
+.s-team.nz{align-items:flex-start;border-left:1px solid #1A1A1A}
+.t-flag {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: .3rem;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}.t-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.06em;line-height:1}
+.t-name.eng{color:#E06060}
+.t-name.nz{color:#909090}
+.t-score{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:600;color:#AAA;margin-top:.25rem}
+.t-extras{font-family:'EB Garamond',serif;font-size:.82rem;color:#666;margin-top:.3rem;line-height:1.7}
+.s-team.eng .t-extras{text-align:right}
+.s-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.8rem 2.2rem;gap:.28rem}
+.sc-lbl{font-family:'DM Sans',sans-serif;font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:#444}
+.sc-main{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);line-height:1;color:var(--score-text);letter-spacing:.04em;text-align:center}
+.sc-main .dash{color:var(--eng);display:block;font-size:clamp(3.5rem,7vw,5.5rem)}
+.sc-vs{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#555;margin:.2rem 0}
+.sc-result{font-family:'DM Sans',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(204,0,0,.12);border:1px solid rgba(204,0,0,.3);padding:.22rem .85rem;border-radius:2px;text-align:center;line-height:1.5}
+.sc-venue{font-family:'EB Garamond',serif;font-size:.77rem;color:#555;font-style:italic;margin-top:.12rem;text-align:center}
+.super-over-box{background:rgba(204,0,0,.08);border:1px solid rgba(204,0,0,.2);padding:.8rem 1.5rem;margin-top:.5rem;text-align:center}
+.so-ttl{font-family:'DM Sans',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#CC0000;margin-bottom:.4rem}
+.so-scores{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:white;letter-spacing:.1em}
+.so-dash{color:var(--eng)}
+
+@keyframes srev{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+.sc-main{animation:srev .9s cubic-bezier(.34,1.56,.64,1) .3s both}
+
+/* AWARDS */
+.awards-row{background:var(--award-bg);border-top:2px solid var(--border);border-bottom:2px solid var(--border);display:flex;justify-content:space-around;padding:1.2rem 2rem;flex-wrap:wrap;gap:1rem;transition:background .35s}
+.aw-item{text-align:center;flex:1;min-width:150px;position:relative}
+.aw-item+.aw-item::before{content:'';position:absolute;left:0;top:10%;bottom:10%;width:1px;background:var(--border)}
+.aw-icon{font-size:1.65rem;display:block;margin-bottom:.18rem}
+.aw-title{font-family:'DM Sans',sans-serif;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim)}
+.aw-name{font-family:'Playfair Display',serif;font-size:1.04rem;font-weight:700;color:var(--ink);margin-top:.08rem;transition:color .35s}
+.aw-ctry{font-family:'DM Sans',sans-serif;font-size:.67rem;color:var(--text-muted)}
+
+/* LAYOUT */
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.sh{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.4rem}
+.sh hr{flex:1;border:none;border-top:1px solid var(--border)}
+.sh-lbl{font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap}
+
+/* HEADLINE */
+.hl-block{border-bottom:3px double var(--border);padding-bottom:2.2rem;margin-bottom:2.2rem}
+.hl-kick{font-family:'DM Sans',sans-serif;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--eng);margin-bottom:.55rem;display:flex;align-items:center;gap:.4rem}
+.hl-kick::before{content:'';width:24px;height:2px;background:var(--eng);display:inline-block}
+h1.hl{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.7rem);font-weight:900;line-height:1.03;color:var(--ink);margin-bottom:.9rem;letter-spacing:-.01em;transition:color .35s}
+.hl-deck{font-family:'EB Garamond',serif;font-size:1.26rem;font-style:italic;color:var(--text-muted);line-height:1.55;max-width:760px;border-left:3px solid var(--eng);padding-left:1.1rem;margin-bottom:1.1rem}
+.byline{font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.1em;color:var(--text-muted);text-transform:uppercase;line-height:1.9}
+.byline strong{color:var(--ink);transition:color .35s}
+.rd-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:.7rem}
+.rd-meta span{font-family:'DM Sans',sans-serif;font-size:.67rem;letter-spacing:.08em;color:var(--text-muted)}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:2rem 0}
+@media(max-width:700px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+.stat-cell{background:var(--stat-bg);padding:1.3rem 1rem;text-align:center;transition:background .2s}
+.stat-cell:hover{background:var(--bg-card)}
+.s-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--ink);line-height:1;transition:color .35s}
+.s-num em{color:var(--eng);font-style:normal}
+.s-dsc{font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.3rem}
+
+/* TOC */
+.toc{background:var(--toc-bg);border:1px solid var(--border);border-left:3px solid var(--eng);padding:1.5rem 1.8rem;margin:2rem 0;column-span:all;transition:background .35s}
+.toc-ttl{font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem}
+.toc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.25rem 2.5rem}
+@media(max-width:500px){.toc ul{grid-template-columns:1fr}}
+.toc ul li a{font-family:'EB Garamond',serif;font-size:.97rem;color:var(--ink);text-decoration:none;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted var(--border);padding-bottom:.18rem;transition:color .2s}
+.toc ul li a:hover{color:var(--eng)}
+.toc-n{font-family:'DM Sans',sans-serif;font-size:.67rem;color:var(--text-muted)}
+
+/* COLUMNS */
+.cols{column-count:3;column-gap:2.8rem;column-rule:1px solid var(--col-rule)}
+@media(max-width:900px){.cols{column-count:2}}
+@media(max-width:560px){.cols{column-count:1}}
+.ap{font-family:'EB Garamond',serif;font-size:1.06rem;line-height:1.78;color:var(--text-body);margin-bottom:1.15rem;text-align:justify;hyphens:auto;transition:color .35s}
+.ap.dc::first-letter{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;float:left;line-height:.72;margin:.1em .1em 0 0;color:var(--ink);padding:.05em .1em;background:var(--bg-alt);border-top:3px solid var(--eng);transition:color .35s,background .35s}
+.art-sh{column-span:all;display:flex;align-items:center;gap:1rem;margin:2.2rem 0 1.5rem}
+.art-sh hr{flex:1;border:none;border-top:1px solid var(--border)}
+.art-sh span{font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap}
+.stars{column-span:all;text-align:center;color:var(--eng);letter-spacing:.5em;font-size:.85rem;margin:1.8rem 0;display:block}
+
+/* PULL QUOTE */
+.pq{column-span:all;border-top:3px solid var(--ink);border-bottom:1px solid var(--border);padding:1.5rem 2rem;margin:2rem 0;text-align:center;transition:border-color .35s}
+.pq-t{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.4vw,1.9rem);font-weight:700;font-style:italic;color:var(--ink);line-height:1.3;transition:color .35s}
+.pq-c{display:block;font-family:'DM Sans',sans-serif;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-top:.6rem}
+
+/* TIMELINE */
+.tl-sec{background:var(--tl-bg);color:white;padding:3rem 2rem;margin:3rem calc(-2rem);position:relative;overflow:hidden;transition:background .35s}
+.tl-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 110%,rgba(204,0,0,.12) 0%,transparent 60%);pointer-events:none}
+.tl-ttl{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.12em;color:var(--eng-light);text-align:center;margin-bottom:2.2rem}
+.ev-grid{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.ev{display:flex;align-items:center;gap:.45rem;padding:.42rem .85rem;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:.78rem;cursor:default;transition:transform .2s,box-shadow .2s}
+.ev:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.ev.eng{background:rgba(204,0,0,.14);border:1px solid rgba(204,0,0,.3);color:#E06060}
+.ev.nz{background:rgba(150,150,150,.1);border:1px solid rgba(150,150,150,.25);color:#AAA}
+.ev.neu{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);color:#C9A84C}
+.ev .ct{font-weight:700;font-size:.68rem;opacity:.7}
+.ev .ci{font-size:.88rem}
+.ev .cn{color:white;font-weight:500}
+.ev .cy{font-size:.63rem;opacity:.55}
+
+/* SUPER OVER TABLE */
+.so-sec{background:var(--pen-bg);border:1px solid var(--border);padding:2.2rem;margin:2.5rem 0;transition:background .35s,border-color .35s}
+.so-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;text-align:center;margin-bottom:.4rem;color:var(--ink);transition:color .35s}
+.so-sub{font-family:'DM Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:1.6rem}
+.so-grid{display:grid;grid-template-columns:1fr 120px 1fr;gap:.6rem 1rem;align-items:center;max-width:740px;margin:0 auto}
+.so-row{display:flex;align-items:center;gap:.6rem;font-family:'EB Garamond',serif;font-size:1rem;color:var(--text-body);transition:color .35s}
+.so-row.eng{justify-content:flex-end}
+.so-dot{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700}
+.so-dot.s{background:#14521E;color:#4CE87C}
+.so-dot.m{background:#5C1010;color:#E84C4C}
+.so-dot.w{background:#8B6914;color:#FFD84C}
+.so-mid{text-align:center;font-family:'DM Sans',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.so-final{grid-column:1/-1;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--eng-light);letter-spacing:.1em;margin-top:.5rem}
+
+/* SCORECARD TABLE */
+.scorecard{width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'EB Garamond',serif;font-size:.95rem}
+.scorecard caption{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.14em;text-align:left;color:var(--eng);padding:.5rem 0;margin-bottom:.5rem}
+.scorecard th{font-family:'DM Sans',sans-serif;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);padding:.4rem .6rem;text-align:left}
+.scorecard td{padding:.4rem .6rem;border-bottom:1px solid var(--border);color:var(--text-body);transition:color .35s}
+.scorecard tr:hover td{background:rgba(204,0,0,.04)}
+.scorecard .runs{font-weight:600;color:var(--ink);transition:color .35s}
+.scorecard .total-row td{border-top:2px solid var(--border);font-weight:700;background:var(--bg-alt)}
+
+/* SPOTLIGHTS */
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0}
+@media(max-width:640px){.sp-grid{grid-template-columns:1fr}}
+.sp-card{background:var(--spot-bg);border:1px solid var(--border);padding:1.8rem;position:relative;overflow:hidden;transition:background .35s,border-color .35s}
+.sp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.sp-card.eng::before{background:linear-gradient(90deg,var(--eng),var(--eng-light))}
+.sp-card.nz::before{background:linear-gradient(90deg,var(--nz),var(--nz-light))}
+.sp-card.gold::before{background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.sp-num{font-family:'Bebas Neue',sans-serif;font-size:6rem;line-height:1;position:absolute;top:0;right:1rem}
+.sp-card.eng .sp-num{color:rgba(204,0,0,.08)}
+.sp-card.nz .sp-num{color:rgba(0,0,0,.06)}
+.sp-tag{font-family:'DM Sans',sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.25rem}
+.sp-name{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:900;color:var(--ink);margin-bottom:.9rem;transition:color .35s}
+.sp-stats{display:flex;gap:1.8rem;flex-wrap:wrap;margin-bottom:1rem}
+.ss .ssn{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--eng)}
+.sp-card.nz .ss .ssn, .sp-card.gold .ss .ssn{color:var(--gold)}
+.ss .ssl{font-family:'DM Sans',sans-serif;font-size:.53rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.sp-body{font-family:'EB Garamond',serif;font-size:1rem;line-height:1.7;color:var(--text-body);transition:color .35s}
+
+/* CLOSING */
+.close-blk{text-align:center;padding:5rem 2rem;background:var(--close-bg);color:white;margin:3rem calc(-2rem) 0;position:relative;overflow:hidden;transition:background .35s}
+.close-blk::before{content:'❝';position:absolute;top:-2rem;left:50%;transform:translateX(-50%);font-size:18rem;color:rgba(204,0,0,.05);font-family:Georgia,serif;line-height:1;pointer-events:none}
+.close-txt{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;color:#FFB0B0;line-height:1.1;max-width:820px;margin:0 auto;position:relative}
+.close-sub{font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2A1A1A;margin-top:1.2rem}
+
+/* FOOTER */
+footer{background:var(--close-bg);color:#2A1A10;text-align:center;padding:2.5rem;border-top:1px solid #180C08;transition:background .35s}
+.f-logo{font-family:'UnifrakturCook',cursive;font-size:1.8rem;font-weight:700;color:var(--gold-dim);margin-bottom:.5rem}
+footer p{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.1em;line-height:2}
+
+/* UTILS */
+.rule-dbl{border:none;border-top:3px double var(--border);margin:2.5rem 0}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.btt{position:fixed;bottom:2rem;right:2rem;z-index:800;width:42px;height:42px;background:var(--ink);border:1px solid var(--gold-dim);color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;text-decoration:none}
+.btt.vis{opacity:1;pointer-events:auto}
+.btt:hover{transform:translateY(-3px)}
+@media(max-width:700px){.nav-links,.nav-date{display:none}.wrap{padding:0 1rem}.tl-sec,.close-blk{margin:3rem -1rem 0}.s-team{padding:1.5rem 1rem}.s-center{padding:1.5rem 1rem}.so-grid{grid-template-columns:1fr 80px 1fr}}
+</style>
+</head>
+<body>
+
+<div id="pb"></div>
+<a class="btt" id="btt" href="#top">↑</a>
+
+<!-- NAV -->
+<nav id="top">
+  <a class="nav-logo" href="#top">The Daily Prophet</a>
+  <ul class="nav-links">
+    <li><a href="#report">Report</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#nz-innings">NZ Innings</a></li>
+    <li><a href="#eng-chase">England's Chase</a></li>
+    <li><a href="#last-over">Last Over</a></li>
+    <li><a href="#superover">Super Over</a></li>
+    <li><a href="#aftermath">Aftermath</a></li>
+    <li><a href="#players">Players</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-date">15 July 2019</div>
+    <button class="tbtn" id="themeBtn">
+      <span class="ti" id="ticon">🌙</span>
+      <span id="tlbl">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<!-- MASTHEAD -->
+<div class="masthead reveal">
+  <div class="m-topbar">Sports · 15 July 2019 · ICC Cricket World Cup 2019 (England) · Final: Lord's · Muhammad Hamza, Lord's · Chief Cricket Correspondent</div>
+  <div class="m-title">The Daily <span>Prophet</span></div>
+  <div class="m-orn">✦ ✦ ✦</div>
+  <div class="m-sub">Where Freedom Prevails Even in Darkness</div>
+  <div class="m-rule"><hr/><span class="dia">◆</span><hr/></div>
+  <div class="m-meta">Special Cricket World Cup Edition · Lord's Cricket Ground, St John's Wood, London · 14 July 2019</div>
+  <div class="m-badge">At Lord's, A New World Champion Crowned · ICC ODI World Cup 2019</div>
+</div>
+
+<!-- SPEC BANNER -->
+<div class="spec-banner">
+  ★ &nbsp; England win the most dramatic Cricket World Cup final ever played — on boundary count &nbsp; ★
+</div>
+
+<!-- SCOREBOARD -->
+<div class="score-banner">
+  <div class="s-team eng">
+    <div class="t-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+    <div class="t-name eng">England</div>
+    <div class="t-score">242 / 8</div>
+    <div class="t-extras">
+      Stokes 84* · Buttler 59<br/>
+      Woakes 2 · Roy 17
+    </div>
+  </div>
+  <div class="s-center">
+    <div class="sc-lbl">50 Overs Each · Lord's · 14 July 2019</div>
+    <div class="sc-main">242<span class="dash">–</span>242</div>
+    <div class="sc-vs">Match Tied After 50 Overs Each</div>
+    <div class="super-over-box">
+      <div class="so-ttl">Super Over</div>
+      <div class="so-scores">ENG 15<span class="so-dash">/</span>0 &nbsp;·&nbsp; NZ 15<span class="so-dash">/</span>1</div>
+    </div>
+    <div class="sc-result">England win on Boundary Count<br/>26 – 17 Boundaries</div>
+    <div class="sc-venue">Lord's Cricket Ground, London · 14 July 2019</div>
+  </div>
+  <div class="s-team nz">
+    <div class="t-flag">🇳🇿</div>
+    <div class="t-name nz">New Zealand</div>
+    <div class="t-score">242 / 7</div>
+    <div class="t-extras">
+      Williamson 30 · Latham 47<br/>
+      Grandhomme 16 · Guptill 19
+    </div>
+  </div>
+</div>
+
+<!-- AWARDS -->
+<div class="awards-row reveal">
+  <div class="aw-item"><span class="aw-icon">🏆</span><div class="aw-title">Man of the Match</div><div class="aw-name">Ben Stokes</div><div class="aw-ctry">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England · 84* &amp; Crucial Fielding</div></div>
+  <div class="aw-item"><span class="aw-icon">🌟</span><div class="aw-title">Man of the Tournament</div><div class="aw-name">Rohit Sharma</div><div class="aw-ctry">🇮🇳 India · 648 Runs · 5 Centuries</div></div>
+  <div class="aw-item"><span class="aw-icon">⚡</span><div class="aw-title">Super Over Hero (Bowling)</div><div class="aw-name">Jofra Archer</div><div class="aw-ctry">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England · 14 ODIs Old</div></div>
+  <div class="aw-item"><span class="aw-icon">🧤</span><div class="aw-title">Super Over Hero (Batting)</div><div class="aw-name">Jos Buttler</div><div class="aw-ctry">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England · Run-Out, World Champions</div></div>
+</div>
+
+<!-- MAIN -->
+<div class="wrap">
+
+  <div class="sh reveal"><hr/><span class="sh-lbl">✦ Match Report · ICC Cricket World Cup Final · 14 July 2019</span><hr/></div>
+
+  <!-- HEADLINE -->
+  <div class="hl-block reveal" id="report">
+    <div class="hl-kick">ICC Cricket World Cup Final · Lord's Cricket Ground, London</div>
+    <h1 class="hl">At Lord's, A New World Champion Crowned</h1>
+    <div class="hl-deck">England win the most dramatic Cricket World Cup final ever played, on the back of Stokes' extraordinary knock of 84* and Archer's superb bowling in a flabbergasting affair at Lord's.</div>
+    <div class="byline">
+      Special Coverage for <strong>The Daily Prophet</strong><br/>
+      <strong>Muhammad Hamza</strong>, Lord's · Chief Cricket Correspondent<br/>
+      15 July 2019 · 19:38 GMT
+    </div>
+    <div class="rd-meta">
+      <span>🕐 20 min read</span>
+      <span>📍 Lord's Cricket Ground, London</span>
+      <span>📅 14 July 2019 · 19:38 GMT</span>
+    </div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="stats-grid reveal">
+    <div class="stat-cell"><div class="s-num">100</div><div class="s-dsc">Overs + Super Over</div></div>
+    <div class="stat-cell"><div class="s-num">84<em>*</em></div><div class="s-dsc">Stokes' Innings (not out)</div></div>
+    <div class="stat-cell"><div class="s-num">26<em>–</em>17</div><div class="s-dsc">Boundary Count</div></div>
+    <div class="stat-cell"><div class="s-num">9<em>hr</em></div><div class="s-dsc">Duration of Drama</div></div>
+    <div class="stat-cell"><div class="s-num">44<em>yr</em></div><div class="s-dsc">World Cup History</div></div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc reveal">
+    <div class="toc-ttl">✦ Contents of This Report</div>
+    <ul>
+      <li><a href="#report">Opening — The Extraordinary Finish <span class="toc-n">I</span></a></li>
+      <li><a href="#timeline">Match Timeline <span class="toc-n">II</span></a></li>
+      <li><a href="#nz-innings">New Zealand's Innings <span class="toc-n">III</span></a></li>
+      <li><a href="#williamson">Williamson's Captaincy <span class="toc-n">IV</span></a></li>
+      <li><a href="#eng-chase">England's Chase — 4/86 &amp; the Partnership <span class="toc-n">V</span></a></li>
+      <li><a href="#last-over">The Last Over — 15 Off 6 <span class="toc-n">VI</span></a></li>
+      <li><a href="#overthrow">The Overthrow — Six Off the Bat <span class="toc-n">VII</span></a></li>
+      <li><a href="#superover">The Super Over <span class="toc-n">VIII</span></a></li>
+      <li><a href="#aftermath">Aftermath — Joy, Grief &amp; a New Champion <span class="toc-n">IX</span></a></li>
+      <li><a href="#players">Player Spotlights <span class="toc-n">X</span></a></li>
+    </ul>
+  </div>
+
+  <!-- OPENING -->
+  <div class="cols reveal">
+
+    <p class="ap dc">Eloquence of Lord's 14 July 2019 will be etched in the most deepest, unfathomable gargantuan of Cricket History, and will be astutely remembered in the names of the two aforementioned men who for all the superhuman blood, groped the first ever ODI World Cup title for the country which itself invented the game.</p>
+
+    <p class="ap">In the 130 year old history of Cricket, where numerous numbers of matches were won from the depths of abyss or lost from the zeniths, this one ought to rank the most engrossing, extraordinary, fortuitous, prospestrous and dystopian of all time. The thing is perhaps of all the games which have nosedived into the toughest and most utopian in terms of Cricketing folklore, this one will or ought to be ranked highest howsoever different might be the odds. To do differently will be purely nonsensical.</p>
+
+    <p class="ap">In all of 44 year World Cup history, where teams have won World Cups mostly without many hiccups or extreme ends, this one between England and New Zealand has seeked almost the jovian heights of all the previous 11 world cup finals.</p>
+
+    <p class="ap">By screaming "England have won the World Cup" is a huge understatement and sin to think New Zealand lost it. Instead by the end of the 50 overs or the individual super overs, nothing absolutely nothing could separate both the teams. Only that the most absurd of all the rules if the final is tied, finally could decide the ultimate World Cup winner — Boundary Counts.</p>
+
+    <p class="ap">England 26 – 17 New Zealand. Although this scorecard might make you think if the match was a Rugby one, where like this one, matches are fiercely competed between both the sides, yet when peered in closer, the scores were of the total boundaries scored in all of 50 overs plus that extra super over, and after all the initial mayhem, when Martin Guptill ran the second run when two was needed off one, all tiresome habits forgotten, everything lost away in the midst, nothing mattered more now than running that second run, the sprinting abilities of New Zealand's best athlete at their best 3 Dimensional and graphical representation.</p>
+
+    <p class="ap">And then in a sudden whim, when Jason Roy hurled in the most significant throw of his life from fine leg to Jos Buttler, the script was about to be finally completed after more than 9 hours of melodramatic abstruseness, when Buttler sealed the throw with breaking the zing bail stumps, Buttler had broken into a rampage to infinity, accompanied by his jovial and delighted teammates, 100% nodding their glory. And then the giant screen bellowed that England had won the World Cup on boundary count.</p>
+
+    <p class="ap">Notwithstanding the first acute impression would be of humdinger concluding in English victory, but to do so only would be selfishness. Just 10 yards away from the infinity whirl, lay Guptill, head bowed down, eyes drooping, helmets and bat astray and only thing which stood tall with Neesham and Guptill's reactions, were soberness which has held them after having missed out a major title for the second time running. For eight lengthy hours, New Zealand appeared destined for the long forlorn Trophy, after a moment of utmost dejection and sadness at the MCG four years ago, and now more than 20000 miles across, at the Lord's, North London, that feeling was personified with excessive feeling of acceptance and disappointment by Kane Williamson and his men.</p>
+
+    <p class="ap">These two teams, with years of jeopardised matchups between them, no World Cup titles adorning their trophy room, it was never going to be easy. Particularly insane were the decibel level at the home of Cricket, which given the circumstances, were nothing to point the fingers at. England had crushed Australia by eight wickets in road to the finale, while New Zealand had shattered Indian dreams after Guptill had thrown away the greatest direct hits of all time to run out MS Dhoni. Who wrote this script? Not us anyway.</p>
+
+    <p class="ap">Guptill himself had another of that sophisticated work to do in his brief sojourn here. What will pain New Zealand was that they had dominated the game for 99 overs and just one over at the end was what snatched away their chances so intricately.</p>
+
+    <p class="ap">England, chasing 242 for inevitable glory, required 15 in the last over, with Ben Stokes not out on 70 at that stage, and to accompany him were Adil Rashid with just Mark Wood and Jofra Archer to follow. Trent Boult was given to defend 15. A moderate task but clearly the Blackcaps were favourites with none of the batsmen left except Stokes himself.</p>
+
+  </div>
+
+  <div class="pq reveal">
+    <p class="pq-t">"By screaming 'England have won the World Cup' is a huge understatement and sin to think New Zealand lost it. By the end of 50 overs and the individual super overs, nothing absolutely nothing could separate both the teams."</p>
+    <cite class="pq-c">— Muhammad Hamza, The Daily Prophet, Lord's Cricket Ground</cite>
+  </div>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="tl-sec reveal">
+      <div class="tl-ttl">🏏 Match Timeline — 100 Overs + Super Over</div>
+      <div class="ev-grid">
+        <div class="ev nz"><span class="ci">🏏</span><span class="ct">Ov 1</span><span class="cn">NZ Bat First · Williamson wins toss</span></div>
+        <div class="ev nz"><span class="ci">🪃</span><span class="ct">Ov 2</span><span class="cn">Guptill survives · Archer beats edge</span></div>
+        <div class="ev nz"><span class="ci">❌</span><span class="ct">Ov ~6</span><span class="cn">Guptill LBW Woakes · 31/1</span></div>
+        <div class="ev nz"><span class="ci">🤝</span><span class="ct">Ov 7–22</span><span class="cn">Williamson &amp; Nicholls · 74 partnership</span></div>
+        <div class="ev nz"><span class="ci">❌</span><span class="ct">Ov ~32</span><span class="cn">Williamson out (DRS) · Plunkett</span></div>
+        <div class="ev nz"><span class="ci">❌</span><span class="ct">Ov ~36</span><span class="cn">Nicholls out · Plunkett</span></div>
+        <div class="ev nz"><span class="ci">🏏</span><span class="ct">Ov ~45</span><span class="cn">Latham 47 · Grandhomme 16</span></div>
+        <div class="ev neu"><span class="ci">🎯</span><span class="ct">50 Ov</span><span class="cn">NZ all out 242/8 · Target: 243</span></div>
+        <div class="ev eng"><span class="ci">🏏</span><span class="ct">Ov 1</span><span class="cn">Roy survives Boult LBW review</span></div>
+        <div class="ev eng"><span class="ci">❌</span><span class="ct">Ov ~3</span><span class="cn">Roy out · Henry inswinger · 17 (20)</span></div>
+        <div class="ev eng"><span class="ci">❌</span><span class="ct">Ov ~15</span><span class="cn">Root out · De Grandhomme</span></div>
+        <div class="ev eng"><span class="ci">❌</span><span class="ct">Ov ~20</span><span class="cn">Bairstow played on · Ferguson</span></div>
+        <div class="ev eng"><span class="ci">❌</span><span class="ct">Ov ~25</span><span class="cn">Morgan caught · Ferguson · 4/86</span></div>
+        <div class="ev eng"><span class="ci">🤝</span><span class="ct">Ov 25–44</span><span class="cn">Stokes &amp; Buttler · Great partnership</span></div>
+        <div class="ev eng"><span class="ci">50</span><span class="ct">Ov 44</span><span class="cn">Buttler 50 · Stokes 50 · Same over</span></div>
+        <div class="ev eng"><span class="ci">❌</span><span class="ct">Ov ~44</span><span class="cn">Buttler out · Ferguson · 53 needed off 36</span></div>
+        <div class="ev neu"><span class="ci">🎯</span><span class="ct">48.4</span><span class="cn">Boult drops Stokes at boundary · 6 overthrow</span></div>
+        <div class="ev eng"><span class="ci">6️⃣</span><span class="ct">49.3</span><span class="cn">Stokes six! slog sweep · 9 off 3</span></div>
+        <div class="ev neu"><span class="ci">⚡</span><span class="ct">49.4</span><span class="cn">Overthrow from Guptill — 6 to boundary!</span></div>
+        <div class="ev neu"><span class="ci">⏱</span><span class="ct">50 Ov</span><span class="cn">Match Tied 242–242 · Super Over</span></div>
+        <div class="ev eng"><span class="ci">🏏</span><span class="ct">SO</span><span class="cn">Buttler &amp; Stokes bat · England 15/0</span></div>
+        <div class="ev nz"><span class="ci">🏹</span><span class="ct">SO</span><span class="cn">Archer bowls · Guptill run out · NZ 15/1</span></div>
+        <div class="ev eng"><span class="ci">🏆</span><span class="cn">England win on Boundary Count · 26 – 17</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NZ INNINGS -->
+  <div class="sh reveal" id="nz-innings"><hr/><span class="sh-lbl">✦ New Zealand's Innings — Setting the Target</span><hr/></div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">Kane Williamson, who has read pitches throughout this World Cup better than anyone, except once against Pakistan when he took away just one spinner in place of two, decided to bat owing to his inner eye demanding the pitch to become slower in the latter half. Coupled with chasing pressure it indeed was the correct choice. Of course runs on the board matter and even a fifteen minute delay — owing to early morning rains — still didn't change his perspective. From that moment on Williamson orchestrated his men aptly with the decision making of an emperor setting his army too well.</p>
+
+    <p class="ap">He beheld how Guptill and Henry Nicholls strode out for one last time in the World Cup. How they tucked in with their usual perseverance and endurance, just hanging in there and carrying the hopes of an entire country. It never was easy. Nor did England's bowlers allow it to. How can you explain Nicholls hopping up and down, all dignity forgotten, how did Guptill manage to survive a ferocious opening spell from Chris Woakes and Jofra Archer? How else would give in Marais Erasmus' brilliant on-field decision of ruling Guptill not out when a corker of a delivery from Archer in the second over took Guptill's pocket on its way to the keeper? How else could you argue the fact that Nicholls so brilliantly reviewed a wrongly judged LBW appeal off Woakes in the third over of the match? Nah, you wouldn't!</p>
+
+    <p class="ap">The total trickled on and yet we were eeringly stationary. Nothing could derail our motive the whole afternoon, or night or evening depending upon the region you were witnessing the greatest game ever played. Those jeering the cause of boredom regarding Cricket must tuck in and see the abnormally jettisoned beauty of Cricket.</p>
+
+    <p class="ap">Guptill has had a run drought for quite a time. And today at the biggest stage and in the most significant moment, he delivered a couple of brilliantly driven boundaries followed by a ramp six off Archer. This was followed by a crunched straight drive over the bowler's head for four. But yet, it wasn't Guptill's day, neither with bat nor while fielding as it turned out later. He was adjudged LBW off Woakes.</p>
+
+    <p class="ap">By the time the powerplay was done, New Zealand were 1/31, a run-rate of 3.1. How trivial! But all they cared was Kane Williamson's wicket. After all he twice plucked out his team when in peril and on wickets as such, he could sit over eons and then plug up in the latter stages. So was he turning it on with Henry Nicholls and the partnership continued at a dignified rate, a rate none too much discouraging from either side's point of view.</p>
+
+    <p class="ap">Woakes and Archer's first spells were done and the balls jagged in and away like cobras, swirling away off the green top with sophisticated juggling. Williamson opened his mark off his 15th delivery and was left on 2 off 22 while his partner motored on. A partnership of 74 for the second wicket followed which weathered the initial storm and pushed New Zealand into a much better position. The 22nd over let the total go past 100 and Adil Rashid was back on with the slips dispersed and the pressure easing up.</p>
+
+    <p class="ap">Liam Plunkett was the man of the moment when he removed Williamson after DRS was used to overturn the decision, and Nicholls fell to the same bowler, playing on a cross-seam delivery four overs later. In yet another pathetic umpiring decision, Ross Taylor was given LBW off Mark Wood, despite the ball tracking showing the ball to have missed the leg stump by an inch or so. Tom Latham did what he could manage with his blade, occasionally finding the boundary yet in somewhat unforeseen circumstances, the tide never really got up with New Zealand, the lady luck smiling on New Zealand's part.</p>
+
+    <p class="ap">New Zealand were driven by Latham — 47 off 56, 2 fours, 1 six, i.e. 14 runs contributed in boundaries and the rest run — and Colin de Grandhomme, 16 off 28. At 5/214 with four overs left, and Latham and Grandhomme on the crease, the odds were aligned with New Zealand to force their cause. Though the pitch wasn't that easy to bat on, England plugged the loopholes in the Blackcaps with superb, ordinate bowling, and having them score just 27 more with nine wickets down by the end, leaving England 242 to get their fabled crown in their deserted trophy room.</p>
+
+  </div>
+
+  <!-- WILLIAMSON'S CAPTAINCY -->
+  <div class="sh reveal" id="williamson"><hr/><span class="sh-lbl">✦ The Emperor's Field — Williamson's Masterclass</span><hr/></div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">Yet 242 seemed way off. For the second time running, New Zealand had set up a total in the range of 240, and for the second time their otherworldly bowling made 240-ish totals appear scathingly tough and incandescent. It was, you would confess, impossible to stop a team of England's abnormality and sporadic success in unravelling the most unorthodox of techniques since their nadir of the 2015 World Cup, but this is New Zealand we are talking about. A team which saved the sweaty palms bathed in killing pressure and ameliorated the risks which needed to be taken at will.</p>
+
+    <p class="ap">And then there was Kane Williamson who perhaps saved his best captaincy at the very end. It was that much optimising for him to do what was anticipated of him. How else would you explain him bowling Colin de Grandhomme, a medium-pace pacer getting a bowl in before Santner and well before the 20th over? Of course you couldn't, for we are not Williamson. Williamson is Williamson and he was himself all along. Perhaps he read the true nature of the pitch better than us. Better than any of us who saw the unfathomable jagging and swinging and seaming of the ball with the intermittent Magnus effect. He understood!</p>
+
+    <p class="ap">And then Trent Boult was given the subtle honour of bowling both the first and the last over of the innings — or to put it more melodramatically — bowling the last over of the tournament in the super over.</p>
+
+    <p class="ap">As though apt it was, it was Boult who got the English nerves jangling with the very first ball — a trademark Boult inswinger, which when released from his favoured high shoulder position, jags in sharply and plumbs the batter in front; today he did that but Marais Erasmus ruled it not out. And New Zealand reviewed, with Jason Roy sweating it out, not wanting to join the former Kiwi captain, Brendon McCullum in what is a dubious honour of scoring a duck in a World Cup final. But as the ball tracking indicated, the ball was struck in line, pitched in line but struck the leg stump on umpire's call. Stars aligning you would think? Read on!</p>
+
+    <p class="ap">Roy was strangled by Henry in the next over, an over which had everything — from Roy cut in half on the second delivery to beating his outside edge again on the next ball, another absolute corker from the man who destroyed India's top three singlehandedly at Old Trafford last week. Tonight he needed that luck, perhaps some of them more in amount.</p>
+
+    <p class="ap">Nevertheless Roy survived. Somehow he did. And that too after facing some of the most extraordinary, pure class and eminent fast bowling. But perseverance is one thing and Henry with the sort of form he is in, he ought to have a wicket by his name. Sooner or later. He eventually got Roy — 17 off 20, three fours — after beating him five times in the last two overs, with a terrific trademark Henry, an inswinger which closer to off stump makes you play, straightens a shade and then catches the outside edge as it did with Roy, with Tom Latham not making any mistake. It introduced Joe Root.</p>
+
+  </div>
+
+  <!-- ENGLAND'S CHASE -->
+  <div class="sh reveal" id="eng-chase"><hr/><span class="sh-lbl">✦ England's Chase — From 4/86 to a World Cup</span><hr/></div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">Root matched Kane Williamson in today's batting. Not looking entirely good yet hanging out somehow. On the other end, Henry continued, and neatly beat Jonny Bairstow's bat again with a dished out perfectly pitched ball. How did it miss the edge, no one knows. If calmness were an apparel, surely Williamson must have had it in tonnes of wardrobes, such was the eeringly calm and composed impression he was wearing on his face when the thundering balls were somehow missing the bat. It was certainly unexpected from the captain of a team playing a World Cup final, but then Williamson isn't a common guy, is he?</p>
+
+    <p class="ap">The thing is Root and Bairstow survived just like Nicholls and Williamson had. Both the innings showed sharp similarities and surely by the end of all the wonderful, nothing could separate them. Root was always a patch of calm on rough seas, but today no! New Zealand were always too circumspect with their bowling. What made Joe Root perform opposite to his natural instincts, coming down and smashing only thin air, the ball completely missing the bat and then buckling his bat unexpectedly all around looking for runs that clearly were not there? Root stayed nonplussed, Kiwis wore on.</p>
+
+    <p class="ap">And Williamson's quintessential captaincy was on cloud nine, when he introduced De Grandhomme — the step yielded a couple of nervous glances from the Kiwis but stifled laughs from English spectators. But then Kane is a canny customer, he won't do captaincy as you wish. He read the pitch, the surface way better than you did. So judging by the seam and cross seam jangling off the surface, he believed De Grandhomme to be the perfect man for the job. That was when Root, sensing an opportunity to smack him down, was continuously beaten, and the tension across the oldest cricket ground in the world was rising at the speed of light. Root kept missing, De Grandhomme kept pitching perfectly. It seemed it was a matter of time before the inevitable would happen. And guess what, it did!</p>
+
+    <p class="ap">In steamed Grandhomme, and this time luck refused to be on Root's side, as an outside edge after walking down like a dingly bubbly for a wild slog was caught behind. In between the matchup between both of them, de Grandhomme himself dropped Bairstow off his own bowling in followthrough. From there on the brakes were applied, the stifling evident and England holding on. Ferguson was brought on, his excessive pace now necessary. Jonny Bairstow's final day wasn't as much as he would have desired, a conclusively scratchy innings, no big shots whatsoever. So Lockie Ferguson's pace and all Bairstow could manage was a thick played on onto the stumps.</p>
+
+    <p class="ap">Nonetheless, Ferguson wasn't easy to keep off guard. You could not guess why Eoin Morgan decided to have a crackdown on every delivery he faced, when his team were three down and just 80 on board — he needed to think. The captaincy punch was on display, and Williamson fair to say was the unquestionable winner. Yet Morgan's team won the cup. How instinctively unimaginable? Yes, that was the sort of game it was. Entirely, nerves jangled, groans heard, hands pummelled upon the face in agony, face broken into a roar, there was everything. And all of those expressions were dwelled upon when Eoin Morgan, the man who brought England here while himself from the suburbs of Dublin, was caught extraordinarily by Lockie Ferguson at deep point.</p>
+
+    <p class="ap">Absolutely herculean effort from a diving Ferguson, albeit the catch of the tournament, with toughness from Stokes' catch at the Oval, or Neesham's catch last week at Old Trafford — though it was off Neesham's bowling that Ferguson caught it. It was a clear testimony of the sort of effort Kiwis were showing on field. It nosedived England into gravest peril, harm on an arm's way, and euphoria evident on New Zealanders' faces. A sight of 4/86 in a World Cup final. Tension. Pressure. What not!</p>
+
+    <div class="stars">★ ★ ★</div>
+
+    <p class="ap">At 4/86, if I say the match was going to turn towards England, you would laugh at me. But yes, it did. Williamson read this pitch better than anyone; he is simply the captain of the tournament, save the one he did win: Player of the tournament. So, he kept bowling de Grandhomme, 10 overs for a fifth bowler, ahead of spinner Mitch Santner. He troubled Stokes and Buttler, both trying to blast their way out. But the road ahead was calmness and composure. So, both set away slowly and calmly, occasionally getting boundaries when the bowlers skipped badly. Yet he motored on.</p>
+
+    <p class="ap">With Buttler, he more opened up, with the wicketkeeper batting better, a strike rate a shade under 100, while Stokes was going at 70. It rocketed up the run-rate, and the partnership wore on. And they ran well. Well is an understatement — say this: it was flabbergasting stuff, the quickness at display. Stokes ain't that much of a good strike rotator, he is built on hammering things, to go and play out, but today the stage was biggest, the demands were awesomely high, the moment was what made him abandon his natural self and dig in. Both him and Buttler did well. Better than their comrades, and that too against one of the most versatile and arguably the best bowling attack of this World Cup. It was a match made in heaven, and the heavens seemed to indicate so.</p>
+
+    <p class="ap">You would end up with synonyms, but those who truly witnessed the game in real-time won't end up with their description. Henry kept bowling, Stokes kept defending, it was after all the only way. Essentially, absolutely. 36 overs gone. 4/143. 99 needed off 84. Something extraordinary brewing up. Elsewhere, a thriller of a Wimbledon final was on the brink of completion, between the two greats of modern Tennis — Roger Federer and Novak Djokovic, an epic final of epic proportions. It was a tough ask if you are both a cricket and tennis fan. But they ought to make sense to the day. 14 July 2019. Some day!</p>
+
+    <p class="ap">Ferguson brought on for the 37th, Buttler gets a boundary off the first ball. Ferguson rebounces, allows only 6 off his fifth over. Neesham on for his fourth with the other end, a wicket by his name. Four years ago, he was thinking of quitting the game. Now here was he, at Lord's chasing glory. But he would bowl only this over. Williamson reintroduced Henry from Neesham's end, and Jos Buttler brought out his excellent scoop, easing the pressure. Ferguson continued to apply brakes, even as Buttler and Stokes did the sort of thing which eccentrically matched what Dhoni and Jadeja did last week, each resembling the other in their approach.</p>
+
+    <p class="ap">Buttler was the first to his half-century, followed by Stokes' in the same 44th over from Boult, with the target considerably narrowed down to 53 off 36. Who else apart from Lockie Ferguson could have done today? Nobody, but he — who has got nerves of steel and techniques of a veteran — could get Buttler today, as a wild slog from the backfoot was held out to Tim Southee at sweeper cover. What made Buttler do so when he could have sumptuously batted through, pressure nothing else. It was a slower variation from the left-armer which took off Buttler and introduced Woakes, even as Stokes, on 51 off 83, batted on. Ferguson then came back to get Chris Woakes on 2 — off 4 — to tilt the match in New Zealand's favour, the flavour getting gained by the thin Blackcaps crowd. It was only Stokes who stood between them and the trophy, as the pressure continued to reveal the best facets of the New Zealand team, Williamson orchestrating his men better than anyone.</p>
+
+  </div>
+
+  <div class="pq reveal">
+    <p class="pq-t">"At 4/86, if I say the match was going to turn towards England, you would laugh at me. But yes, it did."</p>
+    <cite class="pq-c">— Muhammad Hamza, The Daily Prophet, Lord's Cricket Ground</cite>
+  </div>
+
+  <!-- LAST OVER -->
+  <div class="sh reveal" id="last-over"><hr/><span class="sh-lbl">✦ The Last Over — 15 Off 6 · Trent Boult vs Ben Stokes</span><hr/></div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">Target narrowed, as Plunkett was gone off Neesham's bowling, and for a sick moment, the whole of Lord's — rather the whole of England — held its breath, when Stokes, on the very next delivery, the 48.4th one, crushed a full length delivery at the stumps towards the flat midwicket boundary, Boult stationed there, who pulled off a terrific one — of Carlos Braithwaite fame, who had nearly got New Zealand over the line with a subtle match-winning century a month ago — got his hands over it, even caught it, but in the unfathomable reckoning, slipped onto the ad boards. We slipped over on our seats, careful to think whether it was a game-turning six or a match-defining catch, could find no voices. It was a very terrific moment and it did us in, did all of us in, with the scrubbers coming on, the crowd lost between thoughts, and Stokes looking on, while Erasmus signalled for the third umpire to make sense of it all.</p>
+
+    <p class="ap">Ready to reel in the replays, the astute humdinger hung in balance, the twin eyes of everyone focused on to the giant screen at the middle of the stands, eyes bowing in, eyes bowing out, and then it came — the ball plucked tightly in his hands and the legs on the ropes. A swish of the ball to Guptill on rebound going futile! It is six! Six!</p>
+
+    <p class="ap">Now 16 off 8. Stokes gets a single, Neesham bowls out Archer — England one further down, his figures representing a good match: 7-0-43-3. And then that last over from Boult, defending 15, just like both the sides ended up scoring 15 aside in the super over.</p>
+
+    <div class="stars">★ ★ ★</div>
+
+    <div class="art-sh" id="overthrow"><hr/><span>The Defining Moment — The Overthrow That Changed Everything</span><hr/></div>
+
+    <p class="ap">Trent Boult doesn't give up that easily. Nor does Ben Stokes. And that was what conjured a breathtaking, flabbergasting last over where everything — frustration, iterative exhaustiveness, naïve belief — burst out. Here was Boult rising equally up to the task, setting up the field with his skipper and then bowling with extraordinary precision. Stokes could only drive fiercely the first two deliveries to mid-off and extra covers respectively, where Williamson had stationed himself and Neesham, so no runs scored and two balls done.</p>
+
+    <p class="ap">15 off 4. Boult again drilled a fuller, closer to Yorker-length delivery at leg stump, a mistake in the circumstances when the fielders were mostly not kept well at the deep midwicket boundary. Stokes does what he does best. Ain't he now when it really mattered? This was the moment. And bending down on one knee, bat cutting thin air in ecstasy, the euphoria visible when the slog sweep hurtled off to the stands. As he absolutely muscled the delivery into the deep midwicket ropes for six, the equation became more gettable now.</p>
+
+    <p class="ap">9 off 3. Another boundary would have set the stage very well for England. But Boult cunningly threw in a Yorker which Stokes drove away towards the cow corner for a brace. This was what you could term the defining moment of the game. Guptill from there rocketed a terrific throw at the striker's end where a struggling Stokes was scrambling for a double, a full-stretch dive coming to his paranormal rescue. But the white beauty took the toe end of the full-stretch diving GM bat of Stokes, and the ball ricocheted to the boundary line. Stokes held up his hands immediately and apologised, muttering something on the terms of "non-deliberately happened." He had nothing to do with it, as the replays astutely indicated.</p>
+
+    <p class="ap">Guptill himself could not get in whatever happened and only could manage a wry smile while Williamson ruffled his beard in agony. His hands then held midway, eyes focused — the sharp contrast to the mood which surrounded when 15 was required off 4. It was a script none of the most astonishing scriptwriters could ever conjure. Just the sort you would end up recalling years and years later. Stokes' hands-up etiquette, Williamson's sober and gentle eyes, Guptill's wry smile, the English fans' damp pursuits earlier shortened by groans now finding their voices, all too much surreal. It was all too magical yet mystical. You don't end up seeing such games. They don't occur too often either.</p>
+
+    <p class="ap">New Zealand players didn't put any vile excuses or any angry outbursts at the umpire when Kumar Dharmamasena signalled six runs. They accepted their own shortcomings and set away to defend 3 off 2. Boult did what he could, firing in an exceptional Yorker twice in two balls to keep England to one run every time, with Stokes helping himself to the striker's end, while both of his concurring partners were run out by Boult with nerveless ball collection. Final tied. A Super Over. Phew! What a game! What a final!</p>
+
+  </div>
+
+  <div class="pq reveal">
+    <p class="pq-t">"The sunshine baked the forums, the eyes trickling with crimson tears. But today was meant to be Stokes' finest hour — doing things only he can, doing things which Jofra Archer could do, and doing things altogether for the greater good."</p>
+    <cite class="pq-c">— Muhammad Hamza, The Daily Prophet, Lord's</cite>
+  </div>
+
+  <!-- SUPER OVER -->
+  <div class="sh reveal" id="superover"><hr/><span class="sh-lbl">✦ The Super Over — The Best Ever Bowled or Batted</span><hr/></div>
+
+  <div class="so-sec reveal">
+    <div class="so-title">The Super Over</div>
+    <div class="so-sub">England (Buttler &amp; Stokes) vs Boult · Then Archer vs Neesham &amp; Guptill</div>
+    <div class="so-grid">
+
+      <div class="so-row eng"><span>England bat (Buttler &amp; Stokes vs Boult)</span><div class="so-dot s">🏏</div></div>
+      <div class="so-mid">England's Over</div>
+      <div class="so-row nz"><div class="so-dot m">—</div><span>NZ bowl (Boult)</span></div>
+
+      <div class="so-row eng"><span>Miscued hoick → 3 (short 3rd man)</span><div class="so-dot s">3</div></div>
+      <div class="so-mid">Ball 1</div>
+      <div class="so-row nz"><div class="so-dot s">—</div><span></span></div>
+
+      <div class="so-row eng"><span>Full toss → SIX (Buttler)</span><div class="so-dot s">6</div></div>
+      <div class="so-mid">Balls 2–5</div>
+      <div class="so-row nz"><div class="so-dot s">—</div><span></span></div>
+
+      <div class="so-row eng"><span>Full toss → FOUR · England 15/0</span><div class="so-dot w">★</div></div>
+      <div class="so-mid">Ball 6</div>
+      <div class="so-row nz"><div class="so-dot s">—</div><span></span></div>
+
+      <div class="so-row eng" style="opacity:.3"><span>—</span></div>
+      <div class="so-mid" style="color:var(--eng);font-weight:700">TARGET 16</div>
+      <div class="so-row nz"><div class="so-dot s">—</div><span>NZ bat (Neesham &amp; Guptill vs Archer)</span></div>
+
+      <div class="so-row eng" style="opacity:.3"><span>—</span></div>
+      <div class="so-mid">Ball 1</div>
+      <div class="so-row nz"><div class="so-dot m">W</div><span>Wide · +1</span></div>
+
+      <div class="so-row eng" style="opacity:.3"><span>—</span></div>
+      <div class="so-mid">Balls 2–3</div>
+      <div class="so-row nz"><div class="so-dot s">6</div><span>Neesham SIX! · 7 off 4</span></div>
+
+      <div class="so-row eng" style="opacity:.3"><span>—</span></div>
+      <div class="so-mid">Balls 4–5</div>
+      <div class="so-row nz"><div class="so-dot s">4</div><span>Two twos · 3 off 2 needed</span></div>
+
+      <div class="so-row eng" style="opacity:.3"><span>—</span></div>
+      <div class="so-mid">Ball 5</div>
+      <div class="so-row nz"><div class="so-dot m">0</div><span>Short ball · Neesham off strike · 2 off 1</span></div>
+
+      <div class="so-row eng"><span>Roy throw → Buttler breaks stumps</span><div class="so-dot w">🏆</div></div>
+      <div class="so-mid" style="color:var(--eng);font-weight:700">GUPTILL RUN OUT!</div>
+      <div class="so-row nz"><div class="so-dot m">✗</div><span>Guptill run out by a yard</span></div>
+
+      <div class="so-final">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — ICC World Champions 2019 🏆</div>
+    </div>
+  </div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">And now there followed the best of the super overs ever bowled or batted. England sent their two best batters of the night in Jos Buttler and the exhausted Ben Stokes. New Zealand turned towards Boult for the one-over burst.</p>
+
+    <p class="ap">Boult failed to nail the Yorkers he had impressed upon just a quarter of an hour earlier. None could after whooping around for 50 overs continuously. It was a matter of World Cup now. Now was the moment. Now was the time. Now or never. And Boult needed to make it count. He is no more that ferociously fanaticising man with an incompressible aura, now that exhaustion and fatigue had dipped in. After all this time, it wasn't even that much easy. And four balls into the super over, he managed length deliveries, then a full one and a full toss. By then 11 runs had been scored as Buttler and Stokes feasted upon their sheer luck; a miscued hoick going beyond the short third man fielder for a three, while a couple of ones and finally that full toss yielded a six. The Yorker on the fifth ball and then again another full toss, sent ricocheting for a boundary.</p>
+
+    <p class="ap">England done. 16 the target. Out came Jimmy Neesham and Martin Guptill to swash out the triumph. And out came Jofra Archer with the bid to defend 16 in the super over of an ODI World Cup final. His face quite indicated the pressure and the hallowed thoughts in his chest. Barely inducted into the England team after his citizenship criteria met ICC doctrine, he was here now, when none even expected him to be a part of this team — here was he, bowling what could be the defining moment of the game and the tournament. A novice in saying, all too 14 ODIs old, Archer needed to do what none before him had the dubious honour of.</p>
+
+    <p class="ap">A wide followed by a brace and then a monstrous hit which sailed into the Mount Stand, making the equation 7 off 4. A brace of twos ensued and the equation was down to our too much acquaintance — 3 off 2. A short ball took Neesham off strike and it left Guptill getting 2 off one. 2 off 1. A moment which demands exquisite glory, unimaginable odds, whispering exasperations and so on.</p>
+
+    <p class="ap">Archer steamed in, no room for error evident, and found a Yorker. Guptill cooked it via a flick towards the deep midwicket, found Jason Roy, Roy fired in perhaps the most significant throw of his entire life, his throw found Buttler, and Buttler with a full-stretch dive pulled out the stumps. Guptill run out by a yard. And all we could see was the England players breaking into a run around the ground. The man who ran teams out of the tournament now left stranded himself, looking down at the stumps, at himself, at his bat which marooned him, which marooned the whole of Christchurch, Wellington, Napier, Auckland and all of New Zealand.</p>
+
+  </div>
+
+  <!-- AFTERMATH -->
+  <div class="sh reveal" id="aftermath"><hr/><span class="sh-lbl">✦ Aftermath — Joy, Grief &amp; A New World Champion</span><hr/></div>
+
+  <div class="cols reveal">
+
+    <p class="ap dc">Joy, euphoria, shock, disappointment, horror all sealed in as the whole of England seemed to roar in delight. There isn't a proper synonym for it maybe. And then there was Kane Williamson, at the Lord's balcony where men have roared at victories or hugged ecstatically, yet he looked downcast, a sense of disconsolation about his features, staring away at some distance, notwithstanding nothing in particular!</p>
+
+    <p class="ap">But what and how the hell did we reach this stage? Well here you are as we delve deep into the greatest World Cup final. Ever! What a climax were those 100 overs after a cricketing festival achingly beautiful and extending into its 45th day!</p>
+
+    <p class="ap">The sunshine baked the forums, the eyes trickling with crimson tears, the New Zealanders, the English, what not. But today was meant to be Stokes' finest hour, doing things only he can, doing things which Jofra Archer could do, and doing things altogether for the greater good. For the best of the times.</p>
+
+    <p class="ap">But neither side deserved to be on the losing side. And yet we must have a winner. Today we had it. But it keeps haunting for eons when you think about New Zealand, Kane and his men. Aah, the tragedy of nature is cruel! And then the trophy held aloft, as Williamson and his men looked on. It could so easily have been theirs, but it wasn't to be.</p>
+
+    <p class="ap">The laws of nature are inevitable, eternal — yet the tears kept flowing, the cauldron full with exhilaration up to its brim. Let that sink in, for now! For we relieved the most epic World Cup Final. Ever!</p>
+
+  </div>
+
+  <div class="pq reveal">
+    <p class="pq-t" style="font-size:clamp(1.5rem,4vw,2.8rem)">For We Relived the Most Epic World Cup Final. Ever!</p>
+    <cite class="pq-c">— The Daily Prophet · 15 July 2019 · Lord's Cricket Ground</cite>
+  </div>
+
+  <!-- PLAYERS -->
+  <div class="sh reveal" id="players"><hr/><span class="sh-lbl">✦ Player Spotlights</span><hr/></div>
+
+  <div class="sp-grid reveal">
+    <div class="sp-card eng">
+      <div class="sp-num">55</div>
+      <div class="sp-tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England · Man of the Match</div>
+      <div class="sp-name">Ben Stokes</div>
+      <div class="sp-stats">
+        <div class="ss"><div class="ssn">84*</div><div class="ssl">Not Out</div></div>
+        <div class="ss"><div class="ssn">98</div><div class="ssl">Balls Faced</div></div>
+        <div class="ss"><div class="ssn">6</div><div class="ssl">Sixes</div></div>
+      </div>
+      <p class="sp-body">The man who stood between England and defeat, and between New Zealand and the World Cup. From 4/86, Stokes anchored the chase with preternatural calm, abandoning his natural attacking instincts for the greater good. His six off Boult in the last over. His inadvertent overthrow boundary. His second run in the super over. All impossible moments, all Stokes. The sunshine baked the forums and it was meant to be his finest hour — and it was.</p>
+    </div>
+    <div class="sp-card eng">
+      <div class="sp-num">22</div>
+      <div class="sp-tag">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England · Super Over Bowler</div>
+      <div class="sp-name">Jofra Archer</div>
+      <div class="sp-stats">
+        <div class="ss"><div class="ssn">14</div><div class="ssl">ODIs Played</div></div>
+        <div class="ss"><div class="ssn">3/42</div><div class="ssl">Match Figures</div></div>
+        <div class="ss"><div class="ssn">SO</div><div class="ssl">Bowled Super Over</div></div>
+      </div>
+      <p class="sp-body">Barely inducted into the England team after his citizenship criteria met ICC doctrine, he was here when none even expected him to be part of this team — here he was, bowling the defining over of the game and the tournament. All too 14 ODIs old. His face indicated the pressure and the hallowed thoughts in his chest, yet he steamed in, found a Yorker, and the rest is history. Guptill run out. England champions.</p>
+    </div>
+  </div>
+
+  <div class="rule-dbl reveal"></div>
+
+  <div class="sp-grid reveal">
+    <div class="sp-card nz">
+      <div class="sp-tag">🇳🇿 New Zealand · Captain Extraordinary</div>
+      <div class="sp-name">Kane Williamson</div>
+      <div class="sp-stats">
+        <div class="ss"><div class="ssn">30</div><div class="ssl">Crucial Runs</div></div>
+        <div class="ss"><div class="ssn">🏅</div><div class="ssl">Player of Tournament</div></div>
+      </div>
+      <p class="sp-body">Williamson read this pitch better than anyone — he is simply the captain of the tournament, save the one trophy he did not win. Orchestrating his men with the decision making of an emperor, his calmness in the most extraordinary circumstances was almost otherworldly. At the Lord's balcony as England celebrated, he looked downcast, a sense of disconsolation about his features, staring away at some distance. If calmness were an apparel, Williamson had it in tonnes of wardrobes.</p>
+    </div>
+    <div class="sp-card gold">
+      <div class="sp-tag">🇳🇿 New Zealand · Tragic Hero</div>
+      <div class="sp-name">Martin Guptill</div>
+      <div class="sp-stats">
+        <div class="ss"><div class="ssn">19</div><div class="ssl">Runs in Final</div></div>
+        <div class="ss"><div class="ssn">😔</div><div class="ssl">Run Out, Super Over</div></div>
+      </div>
+      <p class="sp-body">The man who ran teams out of the tournament — MS Dhoni, among others — now left stranded himself, looking down at the stumps, at himself, at his bat which marooned him, which marooned the whole of Christchurch, Wellington, Napier, Auckland and all of New Zealand. His wry smile at the inadvertent overthrow. His head bowed, eyes drooping. In the cruelty of sport, no one captures it more achingly than Guptill on this July evening at Lord's.</p>
+    </div>
+  </div>
+
+</div><!-- end .wrap -->
+
+<!-- CLOSING -->
+<div class="close-blk reveal">
+  <div class="close-txt">For We Relived the Most Epic World Cup Final. Ever!</div>
+  <div class="close-sub">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England — ICC Cricket World Champions 2019 · Lord's, London<br/>England 242/8 tied New Zealand 242/7 · England win on Boundary Count (26–17) · 14 July 2019</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">The Daily Prophet</div>
+  <p>WHERE FREEDOM PREVAILS EVEN IN DARKNESS</p>
+  <p style="margin-top:.7rem">Sports Special · 15 July 2019 · ICC Cricket World Cup 2019 · England</p>
+  <p>Prophet in London · Muhammad Hamza, Lord's · Chief Cricket Correspondent · 15 July 2019 · 19:38 GMT</p>
+  <p style="margin-top:1rem;font-size:.57rem;color:#1A0A08">
+    Match report by Muhammad Hamza at Lord's Cricket Ground, St John's Wood, London.<br/>
+    Chief Cricket Correspondent · Published 15 July 2019, 19:38 GMT.<br/>
+    All content reproduced from the original printed edition. All rights reserved © The Daily Prophet 2019.
+  </p>
+</footer>
+
+<script>
+// Progress bar + back-to-top
+window.addEventListener('scroll',()=>{
+  const st=document.documentElement.scrollTop;
+  const sh=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById('pb').style.width=(st/sh*100)+'%';
+  const b=document.getElementById('btt');
+  st>500?b.classList.add('vis'):b.classList.remove('vis');
+});
+
+// Scroll reveal
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Dark/light mode
+const btn=document.getElementById('themeBtn');
+const icon=document.getElementById('ticon');
+const lbl=document.getElementById('tlbl');
+let dark=localStorage.getItem('theme-cricket')==='dark';
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  icon.textContent=dark?'☀️':'🌙';
+  lbl.textContent=dark?'Light':'Dark';
+}
+applyTheme();
+btn.addEventListener('click',()=>{dark=!dark;localStorage.setItem('theme-cricket',dark?'dark':'light');applyTheme()});
+</script>
+</body>
+</html>
